@@ -14,23 +14,27 @@
 
             afterLoad: function (anchorLink, index) {
                 if (index === 1) {
-                    $('#section0 .headings').removeClass('hidden').addClass('fadeInLeft');
                     $('#section0 .btn-continue').removeClass('hidden').addClass('bounce');
                 }
                 if (index === 2) {
-                    $('#section1 .headings').removeClass('hidden').addClass('fadeInLeft');
                     $('#section1 .btn-before').removeClass('hidden').addClass('bounce');
+                    $('#section1 .btn-continue').removeClass('hidden').addClass('bounce');
+                }
+                if (index === 3) {
+                    $('#section2 .btn-before').removeClass('hidden').addClass('bounce');
                 }
             },
 
             onLeave: function (index) {
                 if (index == 1) {
-                    $('#section0 .headings').addClass('hidden').removeClass('fadeInLeft');
                     $('#section0 .btn-continue').addClass('hidden').removeClass('bounce');
                 }
                 if (index === 2) {
-                    $('#section1 .headings').addClass('hidden').removeClass('fadeInLeft');
                     $('#section1 .btn-before').addClass('hidden').removeClass('bounce');
+                    $('#section1 .btn-continue').addClass('hidden').removeClass('bounce');
+                }
+                if (index === 3) {
+                    $('#section2 .btn-before').addClass('hidden').removeClass('bounce');
                 }
             }
         });

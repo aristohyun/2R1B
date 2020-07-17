@@ -207,35 +207,5 @@ textarea {
     cursor: pointer;
 }
 
-.btn-link.YC {
-    position: absolute;
-    left: 50%;
-    margin-left:-32px;
-    margin-top:-32px;
-    display: flex;
-    align-items: center;
-    .YC-icon {
-        transition: ease 2s;
-    }
-    #YC-text {
-        display:inline-block;
-        margin:0 0 0 12px;
-        opacity: 0;
-    }
-    &:hover {
-        .YC-icon {
-            transform: translateX(-80px);
-            transition: ease 2s;
-        }
-        #YC-text {
-            font-size:1.75em;
-            margin:0 0 0 12px;
-            opacity: 1;
-            transform: translateX(-80px);
-            transition: opacity 0.3s ease 0.5s;
-        }
-    }
-}
-
 @import 'simple-texture/home/responsive';
 

@@ -24,6 +24,7 @@
     <ul id="menu">
         <li data-menuanchor="character"><a href="#character">character</a></li>
         <li data-menuanchor="team"><a href="#team">team</a></li>
+        <li data-menuanchor="ability"><a href="#ability">team</a></li>
     </ul>
 
     <div id="section0" class="section" data-name="character">
@@ -35,7 +36,15 @@
     <div id="section1" class="section" data-name="team">
         {% include common/notices.html %}
         <a class="btn-before animated hidden" href="#character"><img style="transform:rotate(180deg);" src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
+        <a class="btn-continue animated hidden" href="#ability"><img src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
         
+    </div>
+    <div id="section2" class="section" data-name="ability">
+        {% include common/notices.html %}
+        <a class="btn-before animated hidden" href="#team"><img style="transform:rotate(180deg);" src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
+        <h1>라운드당 한번 카드 강제 교환</h1>
+        <h1>플레이어에게 `요원입니다` 하면서 카드 보여주면</h1>
+        <h1>상대방은 반드시 응해야함</h1>
     </div>
     {% include home/scripts.html %}
 </body>
