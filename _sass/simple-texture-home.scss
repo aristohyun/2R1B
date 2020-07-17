@@ -80,10 +80,13 @@ textarea {
 }
 
 #section0 {
-    background: url('../images/blue/agent/BlueAgent.png') no-repeat 0 0 #F0F0F0;
+    background: url('../images/blue/agent/BlueAgent.png') repeat 0 0 #F0F0F0;
+    background-size: cover;
 }
 #section1 {
-    background: url('../images/blue/agent/team.png') no-repeat 0 0 #F0F0F0;
+    background: url('../images/blue/agent/team.png') repeat 0 0 #F0F0F0;
+    background-size: cover;
+
 }
 #fullPage-nav {
     span {
