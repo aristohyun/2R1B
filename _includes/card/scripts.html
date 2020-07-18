@@ -3,7 +3,7 @@
 <script>
     $(document).ready(function () {
         $.fn.fullpage({
-            anchors: ['front', 'back'],
+            anchors: ['character', 'team','ability'],
             css3: true,
             fixedElements: '.site-notice',
             menu: '#menu',
@@ -18,6 +18,10 @@
                 }
                 if (index === 2) {
                     $('#section1 .btn-before').removeClass('hidden').addClass('bounce');
+                    $('#section1 .btn-continue').removeClass('hidden').addClass('bounce');
+                }
+                if (index === 3) {
+                    $('#section2 .btn-before').removeClass('hidden').addClass('bounce');
                 }
             },
 
@@ -27,6 +31,10 @@
                 }
                 if (index === 2) {
                     $('#section1 .btn-before').addClass('hidden').removeClass('bounce');
+                    $('#section1 .btn-continue').addClass('hidden').removeClass('bounce');
+                }
+                if (index === 3) {
+                    $('#section2 .btn-before').addClass('hidden').removeClass('bounce');
                 }
             }
         });
