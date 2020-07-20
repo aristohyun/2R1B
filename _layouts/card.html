@@ -53,15 +53,22 @@
     
     {% include card/scripts.html %}
     <script>
+        const ability = {
+            "ambassaor":"1",
+            "coy":"2",
+        };
+        const character = {
+            "avsd2412":"ambassar"
+        }
          if(getParam("character") && getParam("color")){
-            $('#section0').css({"background-image": "url(../assets/2R1B/"+getParam("color")+getParam("character")+".png)"});
-            $('#section1').css({"background-image": "url(../assets/2R1B/"+getParam("color")+".png)"});
+            $('#section0').css({"background-image": "url(../assets/card/"+getParam("color")+getParam("character")+".png)"});
+            $('#section1').css({"background-image": "url(../assets/card/"+getParam("color")+".png)"});
             $('#section2').removeClass('hidden');
             $('#abil').removeClass('hidden');
         }
         else{
-            $('#section0').css({"background-image": "url(../assets/2R1B/back.png)"});
-            $('#section1').css({"background-image": "url(../assets/2R1B/back.png)"});
+            $('#section0').css({"background-image": "url(../assets/card/back.png)"});
+            $('#section1').css({"background-image": "url(../assets/card/back.png)"});
         }
        
     </script>
