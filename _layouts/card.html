@@ -56,7 +56,7 @@
         function incodeName(str){
             let result="";
             for( i in str){
-                let temp = str.charCodeAt(i) - 15 - i;
+                let temp = str.charCodeAt(i) - 26 - i;
                 result += String.fromCharCode(temp);
             }    
             //짝수면 -10-인덱스
@@ -67,7 +67,7 @@
         function decodeName(str){
             let result="";
             for(i in str){
-                let temp = str.charCodeAt(i) + 15 + parseInt(i);
+                let temp = str.charCodeAt(i) + 26 + parseInt(i);
                 result += String.fromCharCode(temp);
             }
             return result;
