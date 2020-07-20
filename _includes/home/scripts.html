@@ -32,4 +32,41 @@
         });
     });
 
+    const alphabet = "qiopcPM8dfvbLt56werOuYDF7EASNnmQW34HJgh12RTjklzyGXCV9asBUIZxK0";
+
+function incode(str){
+    let result = "";
+    for(i in str){
+        result += alphabet[str.charCodeAt(i) - 65];
+    }
+    return result;
+}
+function decode(str){
+    let result = "";
+    for(i in str){
+        result += String.fromCharCode(alphabet.indexOf(str[i]) + 65);
+    }
+    return result;
+}
+
+const blue = [
+    "Blue", "BlueAgent", "BlueAmbassar",
+    "BlueAngel", "BlueBlind", "BlueBouncer",
+    "BlueClown", "BlueCoyboy", "BlueDemon",
+    "BlueKnight", "BlueMime", "BluePresident",
+    "BlueSecurity", "BlueShy", "BlueSpy"
+]
+const red = [
+    "Red", "RedAgent", "RedAmbassar",
+    "RedAngel", "RedBlind", "RedBouncer",
+    "RedClown", "RedCoyboy", "RedDemon",
+    "RedDrBoom", "RedMime", "RedBomber",
+    "RedSecurity", "RedShy", "RedSpy"
+]
+const gray = [
+    "GrayAHAB", "GrayBombBot", "GrayBulter", "Graygamblr",
+    "GrayIntern", "GrayJuliet", "GrayMaid", "GrayMI6",
+    "GrayMistrees", "GrayMoby", "GrayQueen", "GrayRival",
+    "GrayRomeo", "GraySurvivor", "GrayVictim", "GrayWife"
+];
 </script>

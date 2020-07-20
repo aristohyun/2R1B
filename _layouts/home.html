@@ -28,7 +28,7 @@
 
     <div id="section0" class="section" data-name="character">
         {% include common/notices.html %}
-
+        <button id="getCard" onclick="ranCard()">random card</button>
         <a class="btn-continue animated bounce" href="#team"><img src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
     </div>
 
@@ -36,6 +36,16 @@
         {% include common/notices.html %}
         <a class="btn-before animated hidden" href="#character"><img style="transform:rotate(180deg);" src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
      </div>
+     <script>
+        function ranCard(){
+            red[parseInt(Math.random()*10000) % 15];
+            gray[parseInt(Math.random()*10000) % 16];
+            const temp = blue[parseInt(Math.random()*10000) % 15];
+            
+            location.href = "card/?id="+incode(temp);
+        }
+     </script>
+
     {% include home/scripts.html %}
 </body>
 
