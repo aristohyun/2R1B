@@ -53,16 +53,83 @@
     
     {% include card/scripts.html %}
     <script>
-        const ability = {
-            "ambassaor":"1",
-            "coy":"2",
-        };
-        const character = {
-            "avsd2412":"ambassar"
+        function incodeName(str){
+            let result="";
+            for( i in str){
+                let temp = str.charCodeAt(i) - 10 - i;
+                result += String.fromCharCode(temp);
+            }    
+            //짝수면 -10-인덱스
+            //홀수면 +10+인덱스
+            //26개 a=97 A=65
+            return result;
         }
-         if(getParam("character") && getParam("color")){
-            $('#section0').css({"background-image": "url(../assets/card/"+getParam("color")+getParam("character")+".png)"});
-            $('#section1').css({"background-image": "url(../assets/card/"+getParam("color")+".png)"});
+        function decodeName(str){
+            let result="";
+            for(i in str){
+                let temp = str.charCodeAt(i) + 10 + parseInt(i);
+                result += String.fromCharCode(temp);
+            }
+            return result;
+        }
+        function getColor(str){
+            if(str[0]=="B") return "Blue";
+            else if(str[0]=="R") return "Red";
+            return "Gray";
+        }
+        const ability = {
+            "BlueAgent":"",
+            "BlueAmbassar":"",
+            "BlueAngel":"",
+            "BlueBlind":"",
+            "BlueBouncer":"",
+            "BlueClown":"",
+            "BlueCyboy":"",
+            "BlueDemon":"",
+            "BlueKnight":"",
+            "BlueMime":"",
+            "BluePresident":"",
+            "BlueSecurity":"",
+            "BlueShy":"",
+            "BlueSpy":"",
+
+            "RedAgent":"",
+            "RedAmbassar":"",
+            "RedAngel":"",
+            "RedBlind":"",
+            "RedBouncer":"",
+            "RedClown":"",
+            "RedCyboy":"",
+            "RedDemon":"",
+            "RedKnight":"",
+            "RedMime":"",
+            "RedPresident":"",
+            "RedSecurity":"",
+            "RedShy":"",
+            "RedSpy":"",
+
+            "GrayAHAB":"",
+            "GrayBombBot":"",
+            "GrayBulter":"",
+            "GrayGamblr":"",
+            "GrayIntern":"",
+            "GrayJuliet":"",
+            "GrayMaid":"",
+            "GrayMI6":"",
+            "GrayMistrees":"",
+            "GrayMoby":"",
+            "GrayQueen":"",
+            "GrayRival":"",
+            "GrayRomeo":"",
+            "GraySurvivor":"",
+            "GrayVictim":"",
+            "GrayWife":""
+        }
+        const name = decodeName(getParam("id"));
+        
+        if(getParam("id")){
+            $('#section0').css({"background-image": "url(../assets/card/"+name+".png)"});
+            $('#section1').css({"background-image": "url(../assets/card/"+getColor(name)+".png)"});
             $('#section2').removeClass('hidden');
             $('#abil').removeClass('hidden');
         }
