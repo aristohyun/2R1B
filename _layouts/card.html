@@ -27,26 +27,44 @@
         <li data-menuanchor="ability"><a href="#ability">team</a></li>
     </ul>
 
-    <div id="section0" class="section" data-name="character" style="background:url('../assets/images/blue/agent/BlueAgent.png') repeat 0 0 #F0F0F0; background-size:cover">
+    <div id="section0" class="section" data-name="character">
         {% include common/notices.html %}
 
         <a class="btn-continue animated bounce" href="#team"><img src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
     </div>
 
-    <div id="section1" class="section" data-name="team" style="background:url('../assets/images/blue/agent/team.png') repeat 0 0 #F0F0F0; background-size:cover">
+    <div id="section1" class="section" data-name="team">
         {% include common/notices.html %}
         <a class="btn-before animated hidden" href="#character"><img style="transform:rotate(180deg);" src="../assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
         <a class="btn-continue animated hidden" href="#ability"><img src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
         
     </div>
-    <div id="section2" class="section" data-name="ability">
+    <div id="section2" class="section hidden" data-name="ability">
         {% include common/notices.html %}
         <a class="btn-before animated hidden" href="#team"><img style="transform:rotate(180deg);" src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
-        <span>라운드당 한번 카드 강제 교환</span> <br><br>
-        <span>플레이어에게 `요원입니다` <br> 하면서 카드 보여주면,</span>  <br>
-        <span>상대방은 반드시 응해야함</span>  <br>
+        <div id="abil" class="hidden">
+            라운드당 한번 카드 강제 교환 <br><br>
+            플레이어에게 `요원입니다`<br>
+            하면서 카드 보여주면,<br>
+            상대방은 반드시 응해야함
+        </div>
+
     </div>
+    
     {% include card/scripts.html %}
+    <script>
+         if(getParam("character") && getParam("color")){
+            $('#section0').css({"background-image": "url(../assets/2R1B/"+getParam("color")+getParam("character")+".png)"});
+            $('#section1').css({"background-image": "url(../assets/2R1B/"+getParam("color")+".png)"});
+            $('#section2').removeClass('hidden');
+            $('#abil').removeClass('hidden');
+        }
+        else{
+            $('#section0').css({"background-image": "url(../assets/2R1B/back.png)"});
+            $('#section1').css({"background-image": "url(../assets/2R1B/back.png)"});
+        }
+       
+    </script>
 </body>
 
 </html>

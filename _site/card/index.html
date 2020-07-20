@@ -65,7 +65,7 @@
         <li data-menuanchor="ability"><a href="#ability">team</a></li>
     </ul>
 
-    <div id="section0" class="section" data-name="character" style="background:url('../assets/images/blue/agent/BlueAgent.png') repeat 0 0 #F0F0F0; background-size:cover">
+    <div id="section0" class="section" data-name="character">
         <!--[if IE]>
     <p class="site-notice">You are using an outdated browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
@@ -77,7 +77,7 @@
         <a class="btn-continue animated bounce" href="#team"><img src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
     </div>
 
-    <div id="section1" class="section" data-name="team" style="background:url('../assets/images/blue/agent/team.png') repeat 0 0 #F0F0F0; background-size:cover">
+    <div id="section1" class="section" data-name="team">
         <!--[if IE]>
     <p class="site-notice">You are using an outdated browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
@@ -89,7 +89,7 @@
         <a class="btn-continue animated hidden" href="#ability"><img src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
         
     </div>
-    <div id="section2" class="section" data-name="ability">
+    <div id="section2" class="section hidden" data-name="ability">
         <!--[if IE]>
     <p class="site-notice">You are using an outdated browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
@@ -98,10 +98,15 @@
 </noscript>
 
         <a class="btn-before animated hidden" href="#team"><img style="transform:rotate(180deg);" src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
-        <span>라운드당 한번 카드 강제 교환</span> <br><br>
-        <span>플레이어에게 `요원입니다` <br> 하면서 카드 보여주면,</span>  <br>
-        <span>상대방은 반드시 응해야함</span>  <br>
+        <div id="abil" class="hidden">
+            라운드당 한번 카드 강제 교환 <br><br>
+            플레이어에게 `요원입니다`<br>
+            하면서 카드 보여주면,<br>
+            상대방은 반드시 응해야함
+        </div>
+
     </div>
+    
     <script src="/assets/javascripts/jquery.fullPage.min.js"></script>
 <script src="/assets/javascripts/jquery.easing.min.js"></script>
 <script>
@@ -145,7 +150,41 @@
     });
 
 </script>
+<script>
+function getParam(sname) {
 
+    var params = location.search.substr(location.search.indexOf("?") + 1);
+
+    var sval = "";
+
+    params = params.split("&");
+
+    for (var i = 0; i < params.length; i++) {
+
+        temp = params[i].split("=");
+
+        if ([temp[0]] == sname) { sval = temp[1]; }
+
+    }
+
+    return sval;
+
+}
+
+</script>
+    <script>
+         if(getParam("character") && getParam("color")){
+            $('#section0').css({"background-image": "url(../assets/2R1B/"+getParam("color")+getParam("character")+".png)"});
+            $('#section1').css({"background-image": "url(../assets/2R1B/"+getParam("color")+".png)"});
+            $('#section2').removeClass('hidden');
+            $('#abil').removeClass('hidden');
+        }
+        else{
+            $('#section0').css({"background-image": "url(../assets/2R1B/back.png)"});
+            $('#section1').css({"background-image": "url(../assets/2R1B/back.png)"});
+        }
+       
+    </script>
 </body>
 
 </html>
