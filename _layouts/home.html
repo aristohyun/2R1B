@@ -28,25 +28,71 @@
 
     <div id="section0" class="section" data-name="character">
         {% include common/notices.html %}
-        <button id="getCard" onclick="ranCard()">random card</button>
-        <a class="btn-continue animated bounce" href="#team"><img src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
-    </div>
+        <div class="center">
+            <div class="team blue" id="blueteam">
+                <input type="checkbox" name="president" value="President" checked disabled>  President
+                <input type="checkbox" name="Agent" value="Agent" >  Agent
+            </div>
+            <div class="team red" id="redteam">
+                <input type="checkbox" name="Bomber" value="true" checked disabled>  Bomber
+                <input type="checkbox" name="Agent" value="Agent" >  Agent
+            </div>
+            <div id="grayteam">
 
-    <div id="section1" class="section" data-name="team">
-        {% include common/notices.html %}
-        <a class="btn-before animated hidden" href="#character"><img style="transform:rotate(180deg);" src="/assets/images/theme/btn-more.png" width="32px" height="32px"/></a>
-     </div>
+            </div>
+        </div>
+       
+        
+        <br>
+        <input type="number" id="peopleNum"></input>
+        <button id="getCard" onclick="ranCard()">random card</button>
+    <a id="kakao-link-btn" href="javascript:sendLink()">
+        <img
+          src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+        />
+    </a>
+</div>
+    {% include home/scripts.html %}
+      <script type="text/javascript">
+        // 웹 플랫폼 도메인 등 초기화한 앱의 설정이 그대로 적용됩니다.
+        // 초기화한 앱에 현재 도메인이 등록되지 않은 경우 에러가 발생합니다.
+        Kakao.init('b1d14543a508d59e70546c5cdfbbf30c')
+        function sendLink() {
+          Kakao.Link.sendCustom({
+            templateId: 32939
+          })
+        }
+      </script>
+    
      <script>
+         
         function ranCard(){
-            red[parseInt(Math.random()*10000) % 15];
-            gray[parseInt(Math.random()*10000) % 16];
-            const temp = blue[parseInt(Math.random()*10000) % 15];
+            const TeamNum = $("#peopleNum").val()/2;
+            if($("#peopleNum").val()%2) gray[parseInt(Math.random()*10000) % 16];
+
+            //const blueTeam = blue[parseInt(Math.random()*10000) % 15];
+            //const redTeam = red[parseInt(Math.random()*10000) % 15];
+            //const grayTeam = gray[parseInt(Math.random()*10000) % 15];
             
-            location.href = "card/?id="+incode(temp);
+            var BlueTeam = new Set();
+            var RedTeam = new Set();
+
+            BlueTeam.add("BluePresident");
+            RedTeam.add("RedBomber");
+
+            while(BlueTeam.size != TeamNum){
+                 BlueTeam.add(blue[parseInt(Math.random()*10000) % 15]);
+            }
+            while(RedTeam.size != TeamNum){
+                RedTeam.add(red[parseInt(Math.random()*10000) % 15]);
+            }
+            console.log(BlueTeam);
+            console.log(RedTeam);
+
+            //location.href = "card/?id="+incode(temp);
         }
      </script>
 
-    {% include home/scripts.html %}
 </body>
 
 </html>

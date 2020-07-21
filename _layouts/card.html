@@ -50,7 +50,7 @@
     {% include card/scripts.html %}
     <script>
         const name = decode(getParam("id"));
-
+        if(name == "Blue1")
         function changeImage(){
             if($('#section0').attr("card") == "back"){
                 $('#section0').attr("card","front");
