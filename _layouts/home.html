@@ -55,47 +55,56 @@
     {% include home/scripts.html %}
       <script type="text/javascript">
         Kakao.init('b1d14543a508d59e70546c5cdfbbf30c');
-        function sendLink() {
-        Kakao.Link.sendDefault({
-      objectType: 'list',
-      headerTitle: '2Rooms & 1 Boom',
-      headerLink: {
-        mobileWebUrl: '',
-        webUrl: '',
+    //     function sendLink() {
+    //     Kakao.Link.sendDefault({
+    //   objectType: 'list',
+    //   headerTitle: '2Rooms & 1 Boom',
+    //   headerLink: {
+    //     mobileWebUrl: '',
+    //     webUrl: '',
+    //   },
+    //   headerImageUrl:'https://aristohyun.github.io/2R1B/assets/card/back.png',
+    //   contents: [
+    //     {
+    //       title: '캐릭터 확인!',
+    //       description: '무작위로 배부되었습니당',
+    //       imageUrl:
+    //         'https://aristohyun.github.io/2R1B/assets/card/logo.png',
+    //       link: {
+    //         mobileWebUrl: '',
+    //         webUrl: '',
+    //       },
+    //     },
+    //     {
+    //       title: '',
+    //       description: '',
+    //       imageUrl: '',
+    //       link: {
+    //         mobileWebUrl: '',
+    //         webUrl: '',
+    //       },
+    //     },
+    //   ],
+    //   buttons: [
+    //     {
+    //       title: '바로가기',
+    //       link: {
+    //         mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+    //         webUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+    //       },
+    //     },
+    //   ],
+    //   buttonsDisplay:'receiver',
+    // })
+    //     }
+    function sendLink() {
+    Kakao.Link.sendCustom({
+      templateId: 32939,
+      templateArgs: {
+        'id':"?id=eJHqhJlV",
       },
-      headerImageUrl:'https://aristohyun.github.io/2R1B/assets/card/back.png',
-      contents: [
-        {
-          title: '캐릭터 확인!',
-          description: '무작위로 배부되었습니당',
-          imageUrl:
-            'https://aristohyun.github.io/2R1B/assets/card/logo.png',
-          link: {
-            mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
-            webUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
-          },
-        },
-        {
-          title: '',
-          description: '',
-          imageUrl: '',
-          link: {
-            mobileWebUrl: '',
-            webUrl: '',
-          },
-        },
-      ],
-      buttons: [
-        {
-          title: '바로가기',
-          link: {
-            mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
-            webUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
-          },
-        },
-      ],
     })
-        }
+  }
       </script>
     
      <script>
