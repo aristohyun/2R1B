@@ -59,7 +59,10 @@
         Kakao.init('b1d14543a508d59e70546c5cdfbbf30c')
         function sendLink() {
           Kakao.Link.sendCustom({
-            templateId: 32939
+            templateId: 32939,
+            templateArgs: {
+                'key': 'eJHqhJlV'
+            }
           })
         }
       </script>
