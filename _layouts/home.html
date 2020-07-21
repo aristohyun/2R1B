@@ -54,14 +54,13 @@
 </div>
     {% include home/scripts.html %}
       <script type="text/javascript">
-        // 웹 플랫폼 도메인 등 초기화한 앱의 설정이 그대로 적용됩니다.
-        // 초기화한 앱에 현재 도메인이 등록되지 않은 경우 에러가 발생합니다.
-        Kakao.init('b1d14543a508d59e70546c5cdfbbf30c')
+        Kakao.init('b1d14543a508d59e70546c5cdfbbf30c');
         function sendLink() {
           Kakao.Link.sendCustom({
             templateId: 32939,
-            templateArgs: {
-                'key': 'eJHqhJlV'
+            link: {
+                web_url: "https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV",
+                mobile_web_url: "https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV"
             }
           })
         }
