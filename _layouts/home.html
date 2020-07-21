@@ -58,12 +58,10 @@
         function sendLink() {
           Kakao.Link.sendCustom({
             templateId: 32939,
-            buttons: [{
-                link: {
-                    mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV'
-                }
-            }
-            ]
+            templateArgs: {
+    'title': '제목 영역입니다.',
+    'description': '설명 영역입니다.'
+  }
           })
         }
       </script>
