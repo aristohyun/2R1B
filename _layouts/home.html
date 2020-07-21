@@ -55,14 +55,48 @@
     {% include home/scripts.html %}
       <script type="text/javascript">
         Kakao.init('b1d14543a508d59e70546c5cdfbbf30c');
-        function sendLink() {
-          Kakao.Link.sendCustom({
-            templateId: 32939,
-            templateArgs: {
-    'title': '제목 영역입니다.',
-    'description': '설명 영역입니다.'
+        Kakao.Link.sendDefault({
+      objectType: 'list',
+      headerTitle: '2Rooms & 1 Boom',
+      headerUrl:'https://aristohyun.github.io/2R1B/assets/card/back.png',
+      headerLink: {
+        mobileWebUrl: '',
+        webUrl: '',
+      },
+      contents: [
+        {
+          title: '캐릭터 확인!',
+          description: '',
+          imageUrl:
+            'https://aristohyun.github.io/2R1B/assets/card/logo.png',
+          link: {
+            mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+            webUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+          },
+        },
+        
+        // {
+        //   title: '무작위로 배부되었습니당',
+        //   description: '',
+        //   imageUrl: 'http://k.kakaocdn.net/dn/bDPMIb/btqgeoTRQvd/49BuF1gNo6UXkdbKecx600/kakaolink40_original.png',
+        //   link: {
+        //     mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+        //     webUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+        //   },
+        // },
+      ],
+      buttons: [
+        {
+          title: '바로가기',
+          link: {
+            mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+            webUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV',
+          },
+        },
+
+      ],
+    })
   }
-          })
         }
       </script>
     
