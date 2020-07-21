@@ -55,6 +55,7 @@
     {% include home/scripts.html %}
       <script type="text/javascript">
         Kakao.init('b1d14543a508d59e70546c5cdfbbf30c');
+        function sendLink() {
         Kakao.Link.sendDefault({
       objectType: 'list',
       headerTitle: '2Rooms & 1 Boom',
@@ -93,6 +94,7 @@
         },
       ],
     })
+        }
       </script>
     
      <script>
