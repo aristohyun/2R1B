@@ -58,10 +58,12 @@
         function sendLink() {
           Kakao.Link.sendCustom({
             templateId: 32939,
-            link: {
-                web_url: "https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV",
-                mobile_web_url: "https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV"
+            buttons: [{
+                link: {
+                    mobileWebUrl: 'https://aristohyun.github.io/2R1B/card/?id=eJHqhJlV'
+                }
             }
+            ]
           })
         }
       </script>
