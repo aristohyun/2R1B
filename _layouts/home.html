@@ -99,12 +99,13 @@
 
             $("#inputDiv").addClass("hidden");
 
-            let $link = $("a");
-            $link.attr("id","kakao-link-btn");
-            $link.attr("href","javascript:sendLink("+1+")");
-            $link.append('<img src="https://aristohyun.github.io/2R1B/assets/card/back.png" width="48px" height="auto"/>');
-            $("#golink").append($link);
-
+            for(i in Team){
+                let $link = $("a");
+                    $link.attr("id","kakao-link-btn");
+                    $link.attr("href","javascript:sendLink("+i+")");
+                    $link.append('<img src="https://aristohyun.github.io/2R1B/assets/card/back.png" width="48px" height="auto"/>');
+                    $("#golink").append($link);
+            }
             $("#golink").removeClass("hidden");
             //location.href = "card/?id="+incode(temp);
         }
