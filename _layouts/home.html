@@ -74,7 +74,8 @@
             //const blueTeam = blue[parseInt(Math.random()*10000) % charNum];
             //const redTeam = red[parseInt(Math.random()*10000) % charNum];
             //const grayTeam = gray[parseInt(Math.random()*10000) % gray.lenght];
-            let blues,reds;
+            let blues=new Array(), reds=new Array();
+
             if(TeamNum>5){
                 blues = blue.concat(blueOver10);
                 reds = red.concat(redOver10);
@@ -88,10 +89,11 @@
 
             BlueTeam.push("BluePresident");
             RedTeam.push("RedBomber");
-
+            let i=0;
             while(BlueTeam.length != TeamNum){
                 BlueTeam.push(blues[i]);
                 RedTeam.push(reds[i]);
+                i++;
             }
             Team = BlueTeam.concat(RedTeam);
             randSwap(Team);
