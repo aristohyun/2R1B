@@ -38,17 +38,13 @@
             <input type="number" id="peopleNum" style="width: 42px;"></input>
             <button id="getCard" onclick="randCard()">GO</button>
         </div>
-        <div id="link" class="hidden">
+        <div id="golink" class="hidden">
             <a id="kakao-link-btn" href="javascript:sendLink(0)">
                 <img
                   src="https://aristohyun.github.io/2R1B/assets/card/back.png" width="48px" height="auto"
                 />
             </a>
-            <a id="kakao-link-btn" href="javascript:sendLink(1)">
-                <img
-                  src="https://aristohyun.github.io/2R1B/assets/card/back.png" width="48px" height="auto"
-                />
-            </a>
+            
         </div>
     
 </div>
@@ -88,14 +84,12 @@
             randSwap(blues);
             randSwap(reds);
 
-
             BlueTeam.push("BluePresident");
             RedTeam.push("RedBomber");
             let i=0;
             while(BlueTeam.length != TeamNum){
                 BlueTeam.push(blues[i]);
                 RedTeam.push(reds[i]);
-
                 i++;
             }
             Team = BlueTeam.concat(RedTeam);
@@ -104,7 +98,14 @@
             console.log(Team);
 
             $("#inputDiv").addClass("hidden");
-            $("#link").removeClass("hidden");
+
+            let $link = $("a");
+            $link.attr("id","kakao-link-btn");
+            $link.attr("href","javascript:sendLink("+1+")");
+            $link.append('<img src="https://aristohyun.github.io/2R1B/assets/card/back.png" width="48px" height="auto"/>');
+            $("#golink").append($link);
+
+            $("#golink").removeClass("hidden");
             //location.href = "card/?id="+incode(temp);
         }
 
