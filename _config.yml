@@ -24,8 +24,8 @@ sass:
 # Site Data
 url: # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: # the subpath of your site, e.g. /blog
-title: Note
-description: sihyeon
+title: 2R1B
+description: 2rooms and a boom
 keywords: 'jekyll,theme,gem-based,blog'
 author:
   name: Sihyeon
@@ -46,7 +46,7 @@ author:
     - name: twitter
       url: 
 home:
-  section1: <h1>강녕</h1>
+  section1:
 blog:
   cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
   cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
