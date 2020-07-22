@@ -57,10 +57,8 @@
 
         let BlueTeam = new Array();
         let RedTeam = new Array();
+        let Team = new Array();
 
-      </script>
-    
-     <script>
         function randSwap(arr){
             for(k in arr){
                 for(i in arr){
@@ -88,17 +86,19 @@
             randSwap(blues);
             randSwap(reds);
 
-            BlueTeam.add("BluePresident");
-            RedTeam.add("RedBomber");
+            BlueTeam.push("BluePresident");
+            RedTeam.push("RedBomber");
 
             while(BlueTeam.length != TeamNum){
                 BlueTeam.push(blues[i]);
                 RedTeam.push(reds[i]);
             }
-            randSwap(BlueTeam);
-            randSwap(RedTeam);
+            Team = BlueTeam.concat(RedTeam);
+            randSwap(Team);
+
             console.log(BlueTeam);
             console.log(RedTeam);
+
             $("#inputDiv").addClass("hidden");
             $("#link").removeClass("hidden");
             //location.href = "card/?id="+incode(temp);
@@ -106,7 +106,6 @@
 
         Kakao.init('b1d14543a508d59e70546c5cdfbbf30c');
         function sendLink(i) {
-            const team = Array.from(BlueTeam);
             let dis = "receiver";
             if(i==0) dis = "sender"
 
@@ -115,7 +114,7 @@
             templateArgs: {
                 header:'https://aristohyun.github.io/2R1B/assets/card/back.png',
                 thumbnail:'https://aristohyun.github.io/2R1B/assets/card/logo.png',
-                id:incode(team[i]),
+                id:incode(Team[i]),
                 display:dis,
             },
         })
