@@ -84,10 +84,11 @@
                 blues = blue;
                 reds = red;
             } 
-            console.log(blues);
-            
+
             randSwap(blues);
             randSwap(reds);
+
+            console.log(blues);
 
             BlueTeam.push("BluePresident");
             RedTeam.push("RedBomber");
@@ -95,6 +96,8 @@
             while(BlueTeam.length != TeamNum){
                 BlueTeam.push(blues[i]);
                 RedTeam.push(reds[i]);
+                console.log(i);
+                console.log(BlueTeam);
                 i++;
             }
             Team = BlueTeam.concat(RedTeam);
