@@ -38,7 +38,7 @@
             <input type="number" id="peopleNum" style="width: 42px;"></input>
             <button id="getCard" onclick="randCard()">GO</button>
         </div>
-        <div id="golink" class="hidden" style="padding:10px;">
+        <div id="golink" class="cards hidden" style="margin:40px;">
             
         </div>
     
@@ -107,7 +107,7 @@
 
         Kakao.init('b1d14543a508d59e70546c5cdfbbf30c');
         function sendLink(i) {
-            let dis = "sender";
+            let dis = "receiver";
             if(i==0) dis = "sender"
 
             Kakao.Link.sendCustom({
