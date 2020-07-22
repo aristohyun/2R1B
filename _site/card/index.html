@@ -13,18 +13,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Note | sihyeon</title>
+<title>2R1B | 2rooms and a boom</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Note" />
-<meta name="author" content="Sihyeon" />
+<meta property="og:title" content="2R1B" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="sihyeon" />
-<meta property="og:description" content="sihyeon" />
+<meta name="description" content="2rooms and a boom" />
+<meta property="og:description" content="2rooms and a boom" />
 <link rel="canonical" href="http://localhost:4000/card/" />
 <meta property="og:url" content="http://localhost:4000/card/" />
-<meta property="og:site_name" content="Note" />
+<meta property="og:site_name" content="2R1B" />
 <script type="application/ld+json">
-{"description":"sihyeon","@type":"WebPage","headline":"Note","url":"http://localhost:4000/card/","author":{"@type":"Person","name":"Sihyeon"},"@context":"https://schema.org"}</script>
+{"description":"2rooms and a boom","@type":"WebPage","headline":"2R1B","url":"http://localhost:4000/card/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <meta name="keywords" content="" />
@@ -33,7 +32,7 @@
 
 
 
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Note" />
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="2R1B" />
 
 <link rel="favicon" href="https://aristohyun.github.io/2R1B/assets/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://aristohyun.github.io/2R1B/assets/favicon.ico" type="image/x-icon">
@@ -182,6 +181,9 @@ function decode(str){
     for(i in str){
         result += String.fromCharCode(alphabet.indexOf(str[i]) + 65);
     }
+    if(result == "Blue1") return "Blue";
+    else if(result == "Red1") return "Red";
+    
     return result;
 }
 const blue = [

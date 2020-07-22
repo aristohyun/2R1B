@@ -2,7 +2,6 @@
 encoding: UTF-8
 exclude: ["*.gem", "*.gemspec", "Gemfile", "Gemfile.lock", "node_modules", "Rakefile", "starter-kit", "vendor"]
 lang: en # Language code as defined in _data/i18n.yml. en, en-gb, en-us, zh, zh-cn, zh-tw etc.
-permalink: /blog/:year/:month/:day/:title/
 remote_theme: yizeng/jekyll-theme-simple-texture
 
 whitelist: [jekyll-feed, jekyll-redirect-from, jekyll-seo-tag, jekyll-sitemap]
@@ -27,39 +26,9 @@ baseurl: # the subpath of your site, e.g. /blog
 title: 2R1B
 description: 2rooms and a boom
 keywords: 'jekyll,theme,gem-based,blog'
-author:
-  name: Sihyeon
-  job_title:
-  location:
-  email: aristohyun97@gmail.com
-  social_links:
-    - name: facebook
-      url:
-    - name: github
-      url: https://github.com/aristohyun
-    - name: instagram
-      url:
-    - name: linkedin
-      url:
-    - name: stackoverflow
-      url:
-    - name: twitter
-      url: 
-home:
-  section1:
-blog:
-  cc_license: http://creativecommons.org/licenses/by-sa/4.0/ # A link to CC License of your choice.
-  cc_license_image: /assets/images/theme/cc-by-sa.png # An image of your CC License. 
-  footer_content: A gem-based responsive simple texture styled <a href="http://jekyllrb.com/">Jekyll</a> theme.
 
-disqus:
-  shortname: # e.g. yizeng
-  public_key: # e.g. ULZ0b9TFefCUJHKQd4JCKv2v3u27YoG7YG8zXPewkWrT333Z0Se9YnxLzoV6VM8W
-google_tag_manager: # e.g. 'GTM-KCQJXZ8F'
-addthis_public_id: # AddThis sharing plugin. See http://www.addthis.com/. E.g. ra-53329e27694534j5 
+home:
 
 paths:
   home: /
-  blog: /blog/
-  categories: /blog/categories/
-  tags: /blog/tags/
+
