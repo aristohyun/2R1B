@@ -204,9 +204,6 @@ const gray = [
     "GrayMistrees", "GrayMoby", "GrayQueen", "GrayRival",
     "GrayRomeo", "GraySurvivor", "GrayVictim", "GrayWife"
 ];
-( parseInt(Math.random()*10000) % 15);
-( parseInt(Math.random()*10000) % 15);
-( parseInt(Math.random()*10000) % 15);
 
 const ability = {
             "Blue":"ㅎㅇㅌ",
@@ -261,7 +258,6 @@ const ability = {
 </script>
     <script>
         const name = decode(getParam("id"));
-        if(name == "Blue1")
         function changeImage(){
             if($('#section0').attr("card") == "back"){
                 $('#section0').attr("card","front");
