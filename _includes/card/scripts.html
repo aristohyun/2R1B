@@ -77,6 +77,9 @@ function decode(str){
     for(i in str){
         result += String.fromCharCode(alphabet.indexOf(str[i]) + 65);
     }
+    if(result == "Blue1") return "Blue";
+    else if(result == "Red1") return "Red";
+    
     return result;
 }
 const blue = [
