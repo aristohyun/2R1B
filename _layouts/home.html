@@ -88,10 +88,10 @@
             RedTeam.add("RedBomber");
 
             while(BlueTeam.size != TeamNum){
-                 BlueTeam.add(blue[parseInt(Math.random()*10000) % 15]);
+                 BlueTeam.add(blue[parseInt(Math.random()*10000) % charNum]);
             }
             while(RedTeam.size != TeamNum){
-                RedTeam.add(red[parseInt(Math.random()*10000) % 15]);
+                RedTeam.add(red[parseInt(Math.random()*10000) % charNum]);
             }
             console.log(BlueTeam);
             console.log(RedTeam);
