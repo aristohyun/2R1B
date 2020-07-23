@@ -51,10 +51,12 @@
         let Team = new Array();
 
         function randSwap(arr){
-            for(k in arr){
-                for(i in arr){
-                    let ran = parseInt(Math.random()*10000) % arr.length;
-                    [arr[i], arr[ran]] = [arr[ran], arr[i]];
+            for(a in arr){
+                for(b in arr){
+                    for(i in arr){
+                        let ran = parseInt(Math.random()*10000) % arr.length;
+                        [arr[i], arr[ran]] = [arr[ran], arr[i]];
+                    }
                 }
             }
         }
