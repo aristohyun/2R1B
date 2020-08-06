@@ -7273,15 +7273,17 @@ const gray = [
         let Team = new Array();
 
         function randSwap(arr){
-            for(k in arr){
-                for(i in arr){
-                    let ran = parseInt(Math.random()*10000) % arr.length;
-                    [arr[i], arr[ran]] = [arr[ran], arr[i]];
+            for(a in arr){
+                for(b in arr){
+                    for(i in arr){
+                        let ran = parseInt(Math.random()*10000) % arr.length;
+                        [arr[i], arr[ran]] = [arr[ran], arr[i]];
+                    }
                 }
             }
         }
         function randCard(){
-            const TeamNum = $("#peopleNum").val()/2;
+            const TeamNum = parseInt($("#peopleNum").val()/2);
             if($("#peopleNum").val()%2) gray[parseInt(Math.random()*10000) % gray.lenght];
 
             //const blueTeam = blue[parseInt(Math.random()*10000) % charNum];
